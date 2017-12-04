@@ -21,3 +21,9 @@ File.read('data.txt').split("\n").each do |passphrase|
   valid += 1
 end
 puts valid
+
+
+# Code golfing, could probably be a bit better somehow reading the data
+
+p File.read('data.txt').split("\n").count{|p|a=p.split;a==a.uniq}
+p File.read('data.txt').split("\n").count{|p|a=p.split.map{|w|w.chars.sort};a==a.uniq}
